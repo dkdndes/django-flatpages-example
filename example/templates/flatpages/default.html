@@ -1,0 +1,12 @@
+{% extends "admin/base_site.html" %}
+
+{% block title %}
+       {{ flatpage.title }}
+{% endblock title %}
+{% block contentheader %}
+    <h2 id="type">{{ flatpage.title }}</h2>
+{% endblock %}
+
+{% block content %}
+    <p>{{ flatpage.content }}</p>
+{% endblock content %}
