@@ -12,9 +12,7 @@ urlpatterns = patterns('',
 )
 
 # Add an entry in your URLconf
-urlpatterns += patterns("",
-    #
-    urlpatterns = patterns('',
+urlpatterns += patterns('',
       (r'^pages/', include('django.contrib.flatpages.urls')),
     #
 )
