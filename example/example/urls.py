@@ -10,3 +10,11 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
 )
+
+# Add an entry in your URLconf
+urlpatterns += patterns("",
+    #
+    urlpatterns = patterns('',
+      (r'^pages/', include('django.contrib.flatpages.urls')),
+    #
+)
