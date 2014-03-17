@@ -1,15 +1,24 @@
 {% extends "admin/base_site.html" %}
-{% block extrahead %}
-
-{% endblock %}
+{% load flatpages %}
 
 {% block title %}
        {{ flatpage.title }}
 {% endblock title %}
+
 {% block contentheader %}
     <h2 id="type">{{ flatpage.title }}</h2>
 {% endblock %}
 
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+    <a href="/admin/">Home</a>
+    {% get_flatpages as flatpages %}
+    {% for page in flatpages %}
+        <a href="{{ page.url }}"> {{ page.title }}</a>
+    {% endfor %}
+    </div>
+{% endblock breadcrumbs %}
+
 {% block content %}
-    <p>{{ flatpage.content }}</p>
+    <div id="content">{{ flatpage.content }}</div>
 {% endblock content %}
