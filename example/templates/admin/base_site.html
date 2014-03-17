@@ -2,15 +2,6 @@
 {% load staticfiles %}
 {% load i18n %}
 
-{% block extrahead %}
-<script type="text/javascript" src="{{ STATIC_URL }}js/tinymce/js/tinymce.min.js"></script>
-<script type="text/javascript">
-tinymce.init({
-    selector: "textarea"
- });
-</script>
-{% endblock %}
-
 {% block title %}{{ title }} | {% trans 'flatpage example' %}{% endblock %}
 
 {% block branding %}
