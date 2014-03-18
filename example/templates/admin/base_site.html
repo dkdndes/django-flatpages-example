@@ -2,10 +2,20 @@
 {% load staticfiles %}
 {% load i18n %}
 
+{% block extrahead %}
+<!-- extrahead -->
+<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea"
+ });
+</script>
+{% endblock %}
+
 {% block title %}{{ title }} | {% trans 'flatpage example' %}{% endblock %}
 
 {% block branding %}
-<h1 id="site-name">Django {% trans 'flatpage example' %}</h1>
+<h1 id="site-name">Django {% trans 'flatpage tinymce example' %}</h1>
 {% endblock %}
 
 {% block nav-global %}{% endblock %}
