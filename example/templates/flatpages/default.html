@@ -5,6 +5,16 @@
        {{ flatpage.title }}
 {% endblock title %}
 
+{% block extrahead %}
+<!-- extrahead -->
+<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea"
+ });
+</script>
+{% endblock %}
+
 {% block contentheader %}
     <h2 id="type">{{ flatpage.title }}</h2>
 {% endblock %}
