@@ -1,4 +1,4 @@
-Django-flatpages-Example
+Django-flatpages-example
 ========================
 
 Django flatpages example with a seperate branch for tinymce integration. 
